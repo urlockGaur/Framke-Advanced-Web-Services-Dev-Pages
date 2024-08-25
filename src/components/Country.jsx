@@ -2,33 +2,22 @@ import React, { Component } from 'react';
 import { IconButton, Typography } from '@mui/material'
 import {Card, CardContent, CardActions, Grid}  from '@mui/material';
 import AddBoxOutlinedIcon from '@mui/icons-material/AddBoxOutlined';
+import IndeterminateCheckBoxOutlinedIcon from '@mui/icons-material/IndeterminateCheckBoxOutlined';
 import Divider from '@mui/material/Divider';
 
 
 class Country extends Component {
-    state = { 
-        name: 'United States',
-        gold: 0,
-
-    }
-
-    //helper method
-   
-    handleIncrement = () => {
-        // the setState method is inherited from the base Component class
-        // when a component's state is altered, it is re-rendered asynchronously by react
-            this.setState({ gold: this.state.gold + 1 })
-    }
     render() {
+        const { onIncrement, onDecrement, country } = this.props;
         return (
-            <Card  elevation={3} sx={{ maxWidth: 345, margin: 'auto', mt: 3, p: 0 }}>
+            <Card  elevation={3} sx={{ maxWidth: 345, margin: 'auto', mt: 3, p: 0, backgroundColor: '#F5F5F5',}}>
                 <CardContent sx={{ p: 1,
                     '&:last-child': {
                         pb: 1,
                      }
                  }}>
                     <Typography variant='h5' sx={{ mb: 1 }}>
-                        {this.state.name}
+                        {country.country }
                     </Typography>
                     <Divider aria-hidden="true" sx={{ mb: 2 }} />
                     <Grid container alignItems="center" spacing={2}>
@@ -45,7 +34,7 @@ class Country extends Component {
                                 alignItems: 'center',
                                 justifyContent: 'center',
                             }}>
-                                {this.state.gold}
+                                {country.gold}
                             </Typography>
                         </Grid>
                         <Grid item>
@@ -55,7 +44,10 @@ class Country extends Component {
                         </Grid>
                         <Grid item>
                             <CardActions sx={{ padding: 0, margin: 0, }}>
-                                <IconButton  size="large"aria-label="add" onClick={this.handleIncrement} color="success" >
+                                <IconButton sx={{padding: 0, margin: 0,}} size="medium"aria-label="minus" onClick={() => onDecrement(country.id) } className='Country' color="secondary" >
+                                    <IndeterminateCheckBoxOutlinedIcon fontSize='inherit'/>
+                                </IconButton>
+                                <IconButton  sx={{padding: 0, margin: 0,}} size="medium"aria-label="add" onClick={() => onIncrement(country.id) } className='Country' color="error" >
                                     <AddBoxOutlinedIcon fontSize='inherit'/>
                                 </IconButton>
                             </CardActions>
