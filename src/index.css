@@ -4,13 +4,21 @@ html, body {
 
 body {
   background: linear-gradient(0deg, #FF5757 0%, #570047 100%);
-  
   font-family: 'Roboto', sans-serif;
-  text-shadow: 0px 0px 5px #ffffff;
   margin: 0px;
   padding: 0px;
-  display: flex;
-  justify-content: center;
+}
+
+.countryCards {
+  display: flex; /* Makes the container a flexbox */
+  flex-direction: row; /* Align children in a row */
+  justify-content: center; /* Center content horizontally */
+  gap: 20px; /* Adds space between the cards */
+  padding: 20px; /* Adds some padding around the container */
+  flex-wrap: wrap; 
+}
+.App {
+  width: 100%;
 }
 
 
