@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Framke-Advanced-Web-Services-Dev-Pages/static/css/main.b4d678d4.css",
-    "main.js": "/Framke-Advanced-Web-Services-Dev-Pages/static/js/main.7934e06c.js",
+    "main.css": "/Framke-Advanced-Web-Services-Dev-Pages/static/css/main.98baeba6.css",
+    "main.js": "/Framke-Advanced-Web-Services-Dev-Pages/static/js/main.611e5dfd.js",
     "static/js/453.3afc9aaf.chunk.js": "/Framke-Advanced-Web-Services-Dev-Pages/static/js/453.3afc9aaf.chunk.js",
     "static/media/roboto-latin-700-normal.woff2": "/Framke-Advanced-Web-Services-Dev-Pages/static/media/roboto-latin-700-normal.4535474e1cf8598695ad.woff2",
     "static/media/roboto-latin-500-normal.woff2": "/Framke-Advanced-Web-Services-Dev-Pages/static/media/roboto-latin-500-normal.7077203b1982951ecf76.woff2",
@@ -60,12 +60,12 @@
     "static/media/roboto-greek-ext-300-normal.woff": "/Framke-Advanced-Web-Services-Dev-Pages/static/media/roboto-greek-ext-300-normal.b590dbe5c639944366d1.woff",
     "static/media/roboto-greek-ext-400-normal.woff": "/Framke-Advanced-Web-Services-Dev-Pages/static/media/roboto-greek-ext-400-normal.16eb83b4a3b1ea994243.woff",
     "index.html": "/Framke-Advanced-Web-Services-Dev-Pages/index.html",
-    "main.b4d678d4.css.map": "/Framke-Advanced-Web-Services-Dev-Pages/static/css/main.b4d678d4.css.map",
-    "main.7934e06c.js.map": "/Framke-Advanced-Web-Services-Dev-Pages/static/js/main.7934e06c.js.map",
+    "main.98baeba6.css.map": "/Framke-Advanced-Web-Services-Dev-Pages/static/css/main.98baeba6.css.map",
+    "main.611e5dfd.js.map": "/Framke-Advanced-Web-Services-Dev-Pages/static/js/main.611e5dfd.js.map",
     "453.3afc9aaf.chunk.js.map": "/Framke-Advanced-Web-Services-Dev-Pages/static/js/453.3afc9aaf.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b4d678d4.css",
-    "static/js/main.7934e06c.js"
+    "static/css/main.98baeba6.css",
+    "static/js/main.611e5dfd.js"
   ]
 }
