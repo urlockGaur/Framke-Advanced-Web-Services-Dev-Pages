@@ -25,6 +25,7 @@ const Medal = ({ type, count, onIncrement, onDecrement }) => {
                         justifyContent: 'center',
                         textAlign: 'center',
                         mt: 1,
+                        fontWeight: 'bold'
                     }}>
                     {count}
                 </Typography>

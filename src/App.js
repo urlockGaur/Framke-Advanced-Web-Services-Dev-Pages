@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Country from './components/Country';
 import Header from './components/Header';
+import NewCountry from './components/NewCountry';
 
 class App extends Component {
   state = {
@@ -21,6 +22,19 @@ class App extends Component {
   getCountryTotalMedalCount = (country) => {
     return ['gold', 'silver', 'bronze'].reduce((a, medal) => a + country[medal], 0)
   }
+
+  handleAdd = (country, gold, silver, bronze) => {
+    const { countries } = this.state;
+    const id = countries.length === 0 ? 1 : Math.max(...countries.map(country => country.id)) + 1;
+    const mutableWords = countries.concat({ id: id, country: country, gold: gold, silver: silver, bronze: bronze });
+    this.setState({ countries:mutableWords });
+  }
+
+  handleDelete = (countryId) => {
+    const countries = this.state.countries.filter(w => w.id !== countryId);
+    this.setState({ countries:countries });
+  }
+
   handleIncrement = (countryId, medalType) => {
     const countries = [...this.state.countries]; // Create a shallow copy of the countries array
     const country = countries.find(c => c.id === countryId); // Find the country by ID
@@ -50,9 +64,12 @@ class App extends Component {
               onIncrement={ this.handleIncrement }
               onDecrement={ this.handleDecrement }
               totalMedals={this.getCountryTotalMedalCount(country)}
+              onDelete={ this.handleDelete }
             />
+            
           ))}
         </div>
+        <NewCountry onAdd={ this.handleAdd }/>
       </div>
     );
   }

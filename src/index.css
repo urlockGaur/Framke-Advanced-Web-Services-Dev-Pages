@@ -21,4 +21,22 @@ body {
   width: 100%;
 }
 
+.New-country {
+  cursor: pointer;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 100;
+}
+
+.New-country .Toggle-form {
+  font-size: 2em;
+  cursor: pointer;
+}
+
+.New-country input {
+  height: 26px;
+}
+
+
 
